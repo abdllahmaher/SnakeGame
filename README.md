@@ -2,9 +2,7 @@
 
 ## Description
 
-Snake Game is a classic console-based game developed in C++ utilizing Windows-specific libraries for sound effects, screen rendering, and input handling. The objective of the game is to control the snake to eat food and grow longer while avoiding collisions with the walls (if enabled) and the snake's own body. The game features multiple difficulty levels, movement modes, and bonus items like golden fruit for additional points and length.
-
-This version of the game allows for both manual and automatic movement modes, different difficulty levels, and wall modes. The game also includes sound effects to enhance the player's experience and a high-score system to track the best performance.
+ a classic console-based game developed in C++ 
 
 ## Features
 
