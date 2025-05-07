@@ -33,7 +33,7 @@ To run the Snake Game, you need to have a C++ compiler installed. The game uses 
    - Download the game files by cloning this repository.
    - If you're using Git, you can clone it using the following command:
      ```bash
-     git clone https://github.com/your-repository-link/snake-game.git
+     git clone https://github.com/abdllahmaher/SnakeGame.git
      ```
 
 2. **Setup the C++ project**:
@@ -42,7 +42,7 @@ To run the Snake Game, you need to have a C++ compiler installed. The game uses 
 
 3. **Compile the Code**:
    - Open a terminal or command prompt in the project's root directory.
-   - If you’re using **GCC**, run the following command:
+   - If youâ€™re using **GCC**, run the following command:
      ```bash
      g++ -o snake_game main.cpp -lwinmm
      ```
