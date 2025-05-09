@@ -18,7 +18,7 @@ bool wall;
 bool automove;
 bool fu = false;
 bool aisnake = false;
-const int width = 20, height = 20;
+const int width = 40, height = 20;
 string state;
 int x = 0, y = 0, fx = 0, fy = 0, ai_x = 0, ai_y = 0, score = 0, lev = 1, len = 0, ailen = 0, totalfruit = 10000;
 vector<int> tailx(2000);
@@ -251,6 +251,9 @@ bool safe(int new_x, int new_y) {
     }
     return true;
 }
+
+
+
                       
 void setup() {
     GameOver = false;
@@ -285,6 +288,9 @@ void setup() {
         return false;
         }()));
 }
+
+
+
 
 void draw() {
     COORD coord = { 0, 0 };
@@ -364,6 +370,10 @@ void draw() {
     SetColor(0, 0);
     cout << endl;
 }
+
+
+
+
 
 void ShowPauseMenu(bool& aisnake, bool& GameOver) {
     system("cls");
@@ -463,6 +473,9 @@ void input() {
         }
     }
 }
+
+
+
 
 void logic() {
     int oldx = tailx[0];
@@ -595,6 +608,11 @@ void logic() {
 
 
 
+
+
+
+
+
 int main() {
 
     srand(time(0));
@@ -638,4 +656,3 @@ int main() {
         GameOver = false;
     }
 }
-
