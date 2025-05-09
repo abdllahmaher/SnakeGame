@@ -4,7 +4,6 @@
 #include <windows.h>
 #include <mmsystem.h>
 #include <limits>
-
 #pragma comment(lib, "winmm.lib")
 using namespace std;
 void SetColor(int color);
@@ -20,13 +19,16 @@ bool fu = false;
 bool aisnake = false;
 const int width = 40, height = 20;
 string state;
-int x = 0, y = 0, fx = 0, fy = 0, ai_x = 0, ai_y = 0, score = 0, lev = 1, len = 0, ailen = 0, totalfruit = 10000;
+int x = 0, y = 0, fx = 0, fy = 0, ai_x = 0, ai_y = 0, score=0, lev = 1, len = 0, ailen = 0, totalfruit = 10000;
+#define score (10000-totalfruit)
+
 vector<int> tailx(2000);
 vector<int> taily(2000);
 vector<int> tailai_x(2000);
 vector<int> tailai_y(2000);
 enum eDirection { stop = 0, Left, Right, up, down };
 eDirection dir;
+
 
 void SetColor(int foreground, int background = 0) {
     SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (background << 4) | foreground);
@@ -72,7 +74,8 @@ void ShowStartMenu(bool& automove, bool& wall, bool& aisnake, int& level) {
         cout << "================================================\n";
         cout << "                  SNAKE GAME MENU               \n";
         cout << "================================================\n\n";
-
+        cout << "your score: " << 10000 - totalfruit;
+        cout << "high Score: " << highScore;
         SetColor(14, 0);
         for (int i = 0; i < numOptions; ++i) {
             if (i == selectedOption) {
@@ -628,8 +631,7 @@ int main() {
         int n, mov, ai;
         ShowStartMenu(automove,  wall, aisnake,  lev);
         system("cls");
-
-        score = 0;
+        totalfruit == 10000;
         len = 0;
         setup();
 
